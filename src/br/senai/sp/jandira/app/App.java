@@ -27,14 +27,14 @@ public class App {
 		contaMaria.setTipo(TipoConta.CORRENTE);
 		System.out.println(contaMaria.getTipo());
 		System.out.println(contaMaria.getAgencia().getNumeroAgencia());
-		//agencia
+		//agencia pedro
 		Agencia agenciaPedro = new Agencia();
 		agenciaPedro.setNumeroAgencia("4214-9");
 		agenciaPedro.setNomeGerente("Astolfo Dias");
 		agenciaPedro.setCidadeAgencia("Jandira");
 		agenciaPedro.setTelefoneGerente("5345-453");
 		
-		//cliente
+		//cliente pedro
 		Cliente clientePedro = new Cliente();
 		clientePedro.setNome("Pedro Cabral");
 		clientePedro.setEmail("pedro@gmail.com");
@@ -45,10 +45,18 @@ public class App {
 		contaPedro.setCliente(clientePedro);
 		contaPedro.depositar(500);
 		contaPedro.setTipo(TipoConta.POUPANCA);
-		contaPedro.setnumeroAgencia("4214-9");
 		System.out.println(contaPedro.getTipo());
-		System.out.println(contaPedro.getnumeroAgencia());
-		//ana
+		System.out.println(contaPedro.getAgencia().getNumeroAgencia());
+		
+		//agencia ana
+		Agencia agenciaAna = new Agencia();
+		agenciaAna.setNumeroAgencia("4214-9");
+		agenciaAna.setNomeGerente("Astolfo Dias");
+		agenciaAna.setCidadeAgencia("Jandira");
+		agenciaAna.setTelefoneGerente("5345-453");
+		
+		
+		//cliente ana
 		Cliente clienteAna = new Cliente();
 		clienteAna.setNome("Ana Gomes");
 		clienteAna.setEmail("Ana@gmail.com");
@@ -58,10 +66,9 @@ public class App {
 		Conta contaAna = new Conta("23145-9");
 		contaAna.setCliente(clienteAna);
 		contaAna.depositar(500);
-		contaAna.setnumeroAgencia("4214-9");
 		contaAna.setTipo(TipoConta.SALARIO);
 		System.out.println(contaAna.getTipo());
-		System.out.println(contaAna.getnumeroAgencia());
+		System.out.println(contaAna.getAgencia().getNumeroAgencia());
 
 		// Exibir os detalhes das contas
 		contaMaria.exibirDetalhes();
